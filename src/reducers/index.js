@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import apidata from './apidata'; 
+import {combineReducers} from "redux";
+import apidata from './apidata';
 
 const rootreducer = combineReducers({
-    apidata: apidata 
-}); 
+  apidata: apidata
+});
 
 export default rootreducer;
