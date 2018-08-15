@@ -43,7 +43,7 @@ class App extends Component {
       }
       else {         
         return(
-          <div className="container-fluid ">
+          <div className="container-fluid">
 
              <div className="col-3"/>
 
@@ -71,27 +71,59 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid ">
+      <div className="container-fluid">
+        <div className="row align-items-start mt-3">
+            <div className="col-3">
+              1 of 3
+            </div> 
+
+            <div className="col-6">            
+              <div className="row">               
+              <div className="col-8"> 
+              <SearchBar 
+                serachText = { this.state.searchString }
+                serachTextfunction = { this.serachTextChange }
+              />
+              </div>
+
+              <div className="col-4">    
+                <button
+                  className=" btn btn-info btn-lg"
+                  onClick = {() => this.onSearch()}
+                > Submit 
+                </button>                 
+              </div>
+              </div>
+            </div>   
+            
+            <div className = "col-3">
+              3 of 3
+            </div>   
+
+        </div>   
 
         <div className="row">
-          <div className="col">
-            <SearchBar 
-              serachText = { this.state.searchString }
-              serachTextfunction = { this.serachTextChange }
-            />
-          </div>
-          <div className="col">
-          <button
-            className="btn btn-info"
-            onClick = {() => this.onSearch()}
-          > Submit </button> 
+
+          <div className="col-3">
+              1 of 3
+          </div> 
+          
+          <div className="col-6">  
+            {this.renderList()}
           </div>
 
-        </div>
-        
-        <div className="row">
-          {this.renderList()}
-        </div>  
+          <div className="col-3">
+              1 of 3
+          </div>   
+          
+        </div> 
+
+        {/*
+          row: header {spacing css }
+          row body 
+
+        */}
+
 
       </div>
     );

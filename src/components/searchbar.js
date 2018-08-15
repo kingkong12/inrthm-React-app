@@ -18,14 +18,14 @@ class SearchBar extends Component {
         render() { 
             return(
                 
-                <div className="input-group input-group-lg">
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="inputGroup-sizing-lg">Search</span>
-                    </div>
+                <div className="input-group input-group-sm mb-3">
+                    
                     <input 
+                    className="w-100 p-3"
                     value = {this.state.searchbartxt} 
                     onChange = {e => this.onInputChange(e.target.value)}
                     /> 
+
                 </div>  
                 
            
